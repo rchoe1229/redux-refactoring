@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import {SET_CHARACTERS} from './Redux/types'
+// import { connect } from 'react-redux'
 
 function App() {
 
@@ -21,6 +23,7 @@ function App() {
         type: "SET_CHARACTERS", 
         characters: results 
       }))
+      // .then(({results}) => props.setCharacters(results))
   }
   return (
     <div className="App">
@@ -29,4 +32,11 @@ function App() {
   );
 }
 
-export default App;
+// const mapStateToProps = (state) => {
+//   return {
+//     characters: state.characters
+//   }
+// }
+
+export default (App);
+// export default connect(mapStateToProps, null)(App);

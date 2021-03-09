@@ -4,29 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
-import { createStore, combineReducers} from 'redux'
-
-const count = (state=0, action) => {
-  switch(action.type){
-    default:
-      return state
-  }
-}
-const characters = (state=[], action) => {
-  switch(action.type){
-    case "SET_CHARACTERS": 
-      return action.characters
-    default: 
-      return state
-  }
-}
-
-const rootReducer = combineReducers({
-  count,
-  characters,
-})
-
-const store = createStore(rootReducer)
+import store from './Redux/store'
 
 
 ReactDOM.render(
